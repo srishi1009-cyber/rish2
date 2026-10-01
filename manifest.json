@@ -1,0 +1,26 @@
+{
+  "id": "rishi-music-player-v1",
+  "name": "Rishi Music - Personal Audio Hub",
+  "short_name": "Rishi Music",
+  "description": "Personal glossy blue audio hub player",
+  "start_url": "./index.html?mode=standalone",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#080808",
+  "theme_color": "#080808",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%230077ff'/><text x='50%' y='65%' font-size='45' text-anchor='middle' fill='%23ffffff'>♫</text></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%230077ff'/><text x='50%' y='65%' font-size='45' text-anchor='middle' fill='%23ffffff'>♫</text></svg>",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

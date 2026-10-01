@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Rishi Music</title>
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#080808" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <div class="app-layout">
+    <!-- Header Section -->
+    <header class="header">
+      <h1 class="logo">♫ RISHI MUSIC</h1>
+      <p class="tagline">Personal Audio Hub</p>
+    </header>
+
+    <!-- Import Button -->
+    <div class="import-section">
+      <label for="file-input" class="btn-import">
+        + Import Track
+      </label>
+      <input type="file" id="file-input" accept="audio/*" multiple style="display: none;" />
+    </div>
+
+    <!-- Filter Dropdown -->
+    <div class="dropdown-wrapper">
+      <label class="dropdown-label">PLAYLIST / ARTIST</label>
+      <div class="select-container">
+        <select id="category-filter">
+          <option value="All">All</option>
+        </select>
+        <i class="fa-solid fa-chevron-down arrow-icon"></i>
+      </div>
+    </div>
+
+    <!-- Search Section -->
+    <div class="search-section">
+      <div class="title-with-search">
+        <h2>All<br>Songs</h2>
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="search-input" placeholder="Search song name..." />
+        </div>
+      </div>
+    </div>
+
+    <!-- Song List -->
+    <main class="song-list" id="song-list">
+      <div class="empty-state" id="empty-state">No tracks imported yet. Tap "+ Import Track" to add songs.</div>
+    </main>
+
+    <!-- Bottom Audio Player Controller -->
+    <footer class="bottom-player">
+      <div class="player-controls">
+        <button class="nav-btn" id="prev-btn">
+          <i class="fa-solid fa-backward-step"></i>
+        </button>
+        <button class="play-btn" id="play-btn">
+          <i class="fa-solid fa-play" id="play-icon"></i>
+        </button>
+        <button class="nav-btn" id="next-btn">
+          <i class="fa-solid fa-forward-step"></i>
+        </button>
+      </div>
+
+      <div class="scrubber-row">
+        <span class="time-label" id="current-time">0:00</span>
+        <div class="slider-container">
+          <input type="range" id="seek-bar" min="0" max="100" value="0" />
+        </div>
+        <span class="time-label" id="duration">0:00</span>
+      </div>
+
+      <div class="current-track-info">
+        <div class="track-title" id="now-playing-title">No track playing</div>
+        <div class="track-subtext" id="now-playing-sub">Select a song from your library</div>
+      </div>
+
+      <audio id="audio-element" preload="auto"></audio>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
